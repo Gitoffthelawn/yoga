@@ -1,3 +1,10 @@
+[build-system]
+requires = [
+    "setuptools",
+    # ↓ See https://github.com/wanadev/mozjpeg-lossless-optimization/issues/26
+    "setuptools<74; implementation_name=='pypy'",
+]
+
 [tool.black]
 line-length = 79
 target-version = ['py39']
