@@ -18,9 +18,6 @@ move yogawin.dist\yogawin.exe yogawin.dist\yoga.exe
 copy winbuild\README-windows-dist.md yogawin.dist\README.txt
 copy LICENSE yogawin.dist\LICENSE.txt
 
-REM Remove the icon that was put here to workaround Nuika icon issue...
-del yoga-icon.ico
-
 endlocal
 
 

@@ -93,7 +93,7 @@ if os.path.isfile("README.rst"):
 
 setup(
     name="yoga",
-    version="1.3.3",
+    version="1.3.4",
     description="Yummy Optimizer for Gorgeous Assets",
     url="https://github.com/wanadev/yoga",
     project_urls={
@@ -110,7 +110,10 @@ setup(
     author_email="contact@wanadev.fr",
     maintainer="Fabien LOISON, Alexis BREUST",
     packages=find_packages(),
-    setup_requires=["cffi>=1.0.0"],
+    setup_requires=[
+        "cffi>=1.0.0",
+        "pycparser",
+    ],
     install_requires=[
         "cffi>=1.0.0",
         "imagequant>=1.0.2",

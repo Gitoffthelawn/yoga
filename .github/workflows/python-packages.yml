@@ -17,14 +17,14 @@ jobs:
     steps:
 
       - name: "Checkout the repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: true
 
       - name: "Set up Python"
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: "3.13"
+          python-version: "3.14"
 
       - name: "Install python dependencies"
         run: |
@@ -35,7 +35,7 @@ jobs:
           python setup.py sdist
 
       - name: "Upload artifacts"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: sdist
           path: dist/
@@ -57,18 +57,18 @@ jobs:
     steps:
 
       - name: "Checkout the repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: true
 
       - name: "Build wheels"
-        uses: pypa/cibuildwheel@v2.22.0
+        uses: pypa/cibuildwheel@v3.3.1
         env:
           CIBW_ARCHS_MACOS: x86_64 arm64 universal2
           CIBW_SKIP: cp*-win32
 
       - name: "Upload artifacts"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: wheels-${{ matrix.os }}
           path: ./wheelhouse/*.whl
@@ -85,13 +85,17 @@ jobs:
     steps:
 
       - name: "Download artifacts"
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
 
       - name: "Move packages to the dist/ folder"
         run: |
           mkdir dist/
           mv sdist/* dist/
           mv wheels-*/*.whl dist/
+
+      - name: "List packages"
+        run: |
+          find . -name "*.whl" -o -name "*.tar.gz"
 
       - name: "Publish packages on PyPI"
         uses: pypa/gh-action-pypi-publish@release/v1
