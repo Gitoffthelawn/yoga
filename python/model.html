@@ -101,26 +101,26 @@
 <h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
 <p>converting and optimizing a model:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">yoga.model</span>
-<span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.fbx&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.glb&quot;</span><span class="p">)</span>
+<span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.fbx"</span><span class="p">,</span> <span class="s2">"./output.glb"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>You can also tune the output by passing options:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.fbx&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.glb&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.fbx"</span><span class="p">,</span> <span class="s2">"./output.glb"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
     <span class="c1"># Model options</span>
-    <span class="s2">&quot;output_format&quot;</span><span class="p">:</span> <span class="s2">&quot;glb&quot;</span><span class="p">,</span>                <span class="c1"># &quot;glb&quot;|&quot;gltf&quot;</span>
-    <span class="s2">&quot;fallback_texture&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>              <span class="c1"># None|&lt;FileLike&gt;|&quot;./image.png&quot;</span>
-    <span class="s2">&quot;no_graph_optimization&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>        <span class="c1"># True|False</span>
-    <span class="s2">&quot;no_meshes_optimization&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>       <span class="c1"># True|False</span>
-    <span class="s2">&quot;no_textures_optimization&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>     <span class="c1"># True|False</span>
-    <span class="s2">&quot;no_fix_infacing_normals&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>      <span class="c1"># True|False</span>
+    <span class="s2">"output_format"</span><span class="p">:</span> <span class="s2">"glb"</span><span class="p">,</span>                <span class="c1"># "glb"|"gltf"</span>
+    <span class="s2">"fallback_texture"</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>              <span class="c1"># None|&lt;FileLike&gt;|"./image.png"</span>
+    <span class="s2">"no_graph_optimization"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>        <span class="c1"># True|False</span>
+    <span class="s2">"no_meshes_optimization"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>       <span class="c1"># True|False</span>
+    <span class="s2">"no_textures_optimization"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>     <span class="c1"># True|False</span>
+    <span class="s2">"no_fix_infacing_normals"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>      <span class="c1"># True|False</span>
 
     <span class="c1"># Images (textures) options</span>
-    <span class="s2">&quot;image_output_format&quot;</span><span class="p">:</span> <span class="s2">&quot;orig&quot;</span><span class="p">,</span>         <span class="c1"># &quot;orig&quot;|&quot;auto&quot;|&quot;jpeg&quot;|&quot;png&quot;|&quot;webp&quot;|&quot;webpl&quot;</span>
-    <span class="s2">&quot;image_resize&quot;</span><span class="p">:</span> <span class="s2">&quot;orig&quot;</span><span class="p">,</span>                <span class="c1"># &quot;orig&quot;|[width,height]</span>
-    <span class="s2">&quot;image_jpeg_quality&quot;</span><span class="p">:</span> <span class="mf">0.84</span><span class="p">,</span>            <span class="c1"># 0.00-1.0</span>
-    <span class="s2">&quot;image_webp_quality&quot;</span><span class="p">:</span> <span class="mf">0.90</span><span class="p">,</span>            <span class="c1"># 0.00-1.0</span>
-    <span class="s2">&quot;image_opacity_threshold&quot;</span><span class="p">:</span> <span class="mi">254</span><span class="p">,</span>        <span class="c1"># 0-255</span>
-    <span class="s2">&quot;image_png_slow_optimization&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>  <span class="c1"># True|False</span>
+    <span class="s2">"image_output_format"</span><span class="p">:</span> <span class="s2">"orig"</span><span class="p">,</span>         <span class="c1"># "orig"|"auto"|"jpeg"|"png"|"webp"|"webpl"</span>
+    <span class="s2">"image_resize"</span><span class="p">:</span> <span class="s2">"orig"</span><span class="p">,</span>                <span class="c1"># "orig"|[width,height]</span>
+    <span class="s2">"image_jpeg_quality"</span><span class="p">:</span> <span class="mf">0.84</span><span class="p">,</span>            <span class="c1"># 0.00-1.0</span>
+    <span class="s2">"image_webp_quality"</span><span class="p">:</span> <span class="mf">0.90</span><span class="p">,</span>            <span class="c1"># 0.00-1.0</span>
+    <span class="s2">"image_opacity_threshold"</span><span class="p">:</span> <span class="mi">254</span><span class="p">,</span>        <span class="c1"># 0-255</span>
+    <span class="s2">"image_png_slow_optimization"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>  <span class="c1"># True|False</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -130,8 +130,8 @@
 <section id="output-format">
 <h3>output_format<a class="headerlink" href="#output-format" title="Link to this heading"></a></h3>
 <p>The format of the output model.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.fbx&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.glb&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;output_format&quot;</span><span class="p">:</span> <span class="s2">&quot;glb&quot;</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.fbx"</span><span class="p">,</span> <span class="s2">"./output.glb"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"output_format"</span><span class="p">:</span> <span class="s2">"glb"</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -152,19 +152,19 @@ YOGA is unable to find one of the model textures.</p>
 file (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;./fallback.png&quot;</span></code>),</p></li>
 <li><p>a “File-like” object (file, <code class="docutils literal notranslate"><span class="pre">BytesIO</span></code>, etc.).</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.fbx&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.glb&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;fallback_texture&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.fbx"</span><span class="p">,</span> <span class="s2">"./output.glb"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"fallback_texture"</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.fbx&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.glb&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;fallback_texture&quot;</span><span class="p">:</span> <span class="s2">&quot;./fallback.png&quot;</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.fbx"</span><span class="p">,</span> <span class="s2">"./output.glb"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"fallback_texture"</span><span class="p">:</span> <span class="s2">"./fallback.png"</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./fallback.png&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-<span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.fbx&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.glb&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;fallback_texture&quot;</span><span class="p">:</span> <span class="n">image_file</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./fallback.png"</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span>
+<span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.fbx"</span><span class="p">,</span> <span class="s2">"./output.glb"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"fallback_texture"</span><span class="p">:</span> <span class="n">image_file</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -172,8 +172,8 @@ file (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;./
 <section id="no-graph-optimization">
 <h3>no_graph_optimization<a class="headerlink" href="#no-graph-optimization" title="Link to this heading"></a></h3>
 <p>Disables empty graph nodes merging.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.fbx&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.glb&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;no_graph_optimization&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.fbx"</span><span class="p">,</span> <span class="s2">"./output.glb"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"no_graph_optimization"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -181,8 +181,8 @@ file (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;./
 <section id="no-meshes-optimization">
 <h3>no_meshes_optimization<a class="headerlink" href="#no-meshes-optimization" title="Link to this heading"></a></h3>
 <p>Disable mesh optimization.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.fbx&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.glb&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;no_meshes_optimization&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.fbx"</span><span class="p">,</span> <span class="s2">"./output.glb"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"no_meshes_optimization"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -191,8 +191,8 @@ file (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;./
 <h3>no_textures_optimization<a class="headerlink" href="#no-textures-optimization" title="Link to this heading"></a></h3>
 <p>Disable texture optimizations (textures will not be optimized using YOGA
 Image).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.fbx&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.glb&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;no_textures_optimization&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.fbx"</span><span class="p">,</span> <span class="s2">"./output.glb"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"no_textures_optimization"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -203,8 +203,8 @@ Image).</p>
 which meshes have normal vectors that are facing inwards and inverts them. See
 the <a class="reference external" href="http://assimp.sourceforge.net/lib_html/postprocess_8h.html">assimp documentation</a> for more
 details.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.fbx&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.glb&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;no_fix_infacing_normals&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.fbx"</span><span class="p">,</span> <span class="s2">"./output.glb"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"no_fix_infacing_normals"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -262,8 +262,8 @@ or stderr.</p></li>
 </dl>
 <p>Example <code class="docutils literal notranslate"><span class="pre">textures</span></code> dictionary:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">textures</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;images/texture1.png&quot;</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./images/texture1.png&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
-    <span class="s2">&quot;texture2.png&quot;</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./texture1.png&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
+    <span class="s2">"images/texture1.png"</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./images/texture1.png"</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
+    <span class="s2">"texture2.png"</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./texture1.png"</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
 <span class="p">}</span>
 </pre></div>
 </div>

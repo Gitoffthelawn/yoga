@@ -103,17 +103,17 @@
 <h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
 <p>Converting and optimizing an image:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">yoga.image</span>
-<span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.png&quot;</span><span class="p">)</span>
+<span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.png"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>You can also tune the output by passing options:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.png&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;output_format&quot;</span><span class="p">:</span> <span class="s2">&quot;orig&quot;</span><span class="p">,</span>         <span class="c1"># &quot;orig&quot;|&quot;auto&quot;|&quot;jpeg&quot;|&quot;png&quot;|&quot;webp&quot;|&quot;webpl&quot;</span>
-    <span class="s2">&quot;resize&quot;</span><span class="p">:</span> <span class="s2">&quot;orig&quot;</span><span class="p">,</span>                <span class="c1"># &quot;orig&quot;|[width,height]</span>
-    <span class="s2">&quot;jpeg_quality&quot;</span><span class="p">:</span> <span class="mf">0.84</span><span class="p">,</span>            <span class="c1"># 0.00-1.0</span>
-    <span class="s2">&quot;webp_quality&quot;</span><span class="p">:</span> <span class="mf">0.90</span><span class="p">,</span>            <span class="c1"># 0.00-1.0</span>
-    <span class="s2">&quot;opacity_threshold&quot;</span><span class="p">:</span> <span class="mi">254</span><span class="p">,</span>        <span class="c1"># 0-255</span>
-    <span class="s2">&quot;png_slow_optimization&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>  <span class="c1"># True|False</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.png"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"output_format"</span><span class="p">:</span> <span class="s2">"orig"</span><span class="p">,</span>         <span class="c1"># "orig"|"auto"|"jpeg"|"png"|"webp"|"webpl"</span>
+    <span class="s2">"resize"</span><span class="p">:</span> <span class="s2">"orig"</span><span class="p">,</span>                <span class="c1"># "orig"|[width,height]</span>
+    <span class="s2">"jpeg_quality"</span><span class="p">:</span> <span class="mf">0.84</span><span class="p">,</span>            <span class="c1"># 0.00-1.0</span>
+    <span class="s2">"webp_quality"</span><span class="p">:</span> <span class="mf">0.90</span><span class="p">,</span>            <span class="c1"># 0.00-1.0</span>
+    <span class="s2">"opacity_threshold"</span><span class="p">:</span> <span class="mi">254</span><span class="p">,</span>        <span class="c1"># 0-255</span>
+    <span class="s2">"png_slow_optimization"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>  <span class="c1"># True|False</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -123,8 +123,8 @@
 <section id="output-format">
 <h3>output_format<a class="headerlink" href="#output-format" title="Link to this heading"></a></h3>
 <p>The format of the output image.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.png&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;output_format&quot;</span><span class="p">:</span> <span class="s2">&quot;orig&quot;</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.png"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"output_format"</span><span class="p">:</span> <span class="s2">"orig"</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -153,13 +153,13 @@ WEBP images as input.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;orig&quot;</span></code>: The default. Keeps the original size (no resize).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[width,</span> <span class="pre">height]</span></code>: The box in which the image should fit.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.png&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;resize&quot;</span><span class="p">:</span> <span class="s2">&quot;orig&quot;</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.png"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"resize"</span><span class="p">:</span> <span class="s2">"orig"</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.png&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;resize&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">],</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.png"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"resize"</span><span class="p">:</span> <span class="p">[</span><span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">],</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -177,9 +177,9 @@ provide as a box the image will fit in.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">0.00</span></code>: ugly images but smaller files,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">1.00</span></code>: best quality images but larger files.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.jpg&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;output_format&quot;</span><span class="p">:</span> <span class="s2">&quot;jpeg&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;jpeg_quality&quot;</span><span class="p">:</span> <span class="mf">0.84</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.jpg"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"output_format"</span><span class="p">:</span> <span class="s2">"jpeg"</span><span class="p">,</span>
+    <span class="s2">"jpeg_quality"</span><span class="p">:</span> <span class="mf">0.84</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -196,9 +196,9 @@ provide as a box the image will fit in.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">0.00</span></code>: ugly images but smaller files,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">1.00</span></code>: best quality images but larger files.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.webp&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;output_format&quot;</span><span class="p">:</span> <span class="s2">&quot;webp&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;webp_quality&quot;</span><span class="p">:</span> <span class="mf">0.90</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.webp"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"output_format"</span><span class="p">:</span> <span class="s2">"webp"</span><span class="p">,</span>
+    <span class="s2">"webp_quality"</span><span class="p">:</span> <span class="mf">0.90</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -216,9 +216,9 @@ only useful when <code class="docutils literal notranslate"><span class="pre">ou
 <li><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: all pixels are considered transparent,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">255</span></code>: all pixels are considered opaque.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.xxx&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;output_format&quot;</span><span class="p">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;opacity_threshold&quot;</span><span class="p">:</span> <span class="mi">254</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.xxx"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"output_format"</span><span class="p">:</span> <span class="s2">"auto"</span><span class="p">,</span>
+    <span class="s2">"opacity_threshold"</span><span class="p">:</span> <span class="mi">254</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -229,9 +229,9 @@ only useful when <code class="docutils literal notranslate"><span class="pre">ou
 sometimes gain few bytes over the default one, but it is 10 times slower on
 average.</p>
 <p>You will generally not want to enable this.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.png&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;output_format&quot;</span><span class="p">:</span> <span class="s2">&quot;png&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;png_slow_optimization&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.png"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"output_format"</span><span class="p">:</span> <span class="s2">"png"</span><span class="p">,</span>
+    <span class="s2">"png_slow_optimization"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -242,8 +242,8 @@ average.</p>
 to 256 colors maximum. By default dithering will be used to reduce the visual
 impact of the color loss.</p>
 <p>The color quantization is disabled by default.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.png&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;enable_quantization&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.png"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"enable_quantization"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -254,9 +254,9 @@ impact of the color loss.</p>
 <p>The maximum number of colors to use in the output image. This options has
 effect only when <code class="docutils literal notranslate"><span class="pre">enable_quantization</span></code> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <p>The value is a number between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">256</span></code> (<code class="docutils literal notranslate"><span class="pre">256</span></code> by default).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.png&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;enable_quantization&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="s2">&quot;quantization_max_colors&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.png"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"enable_quantization"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">"quantization_max_colors"</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
@@ -271,9 +271,9 @@ effect only when <code class="docutils literal notranslate"><span class="pre">en
 <li><p><code class="docutils literal notranslate"><span class="pre">0.0</span></code>: no dithering</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">1.0</span></code>: maximal dithering</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">&quot;./input.png&quot;</span><span class="p">,</span> <span class="s2">&quot;./output.png&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
-    <span class="s2">&quot;enable_quantization&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="s2">&quot;quantization_dithering_level&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yoga</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="s2">"./input.png"</span><span class="p">,</span> <span class="s2">"./output.png"</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"enable_quantization"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">"quantization_dithering_level"</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
 <span class="p">})</span>
 </pre></div>
 </div>
